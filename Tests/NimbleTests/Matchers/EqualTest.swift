@@ -66,7 +66,7 @@ final class EqualTest: XCTestCase, XCTestCaseProvider {
         expect(Set<Int>()) == Set<Int>()
         expect(Set([1, 2])) != Set<Int>()
 
-        failsWithErrorMessageForNil("expected to equal <[1, 2]>, got <nil>") {
+        failsWithErrorMessageForNil("expected to equal Set([1, 2]), got <nil>") {
             expect(nil as Set<Int>?).to(equal(Set([1, 2])))
         }
 
